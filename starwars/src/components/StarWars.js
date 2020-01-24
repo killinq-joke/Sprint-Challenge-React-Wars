@@ -9,7 +9,7 @@ margin: 10px auto;
 `;
 
 function StarWars(props) {
-    console.log(props);
+    // console.log(props);
     return(
         <Div>
             <h1>{props.name}</h1>
