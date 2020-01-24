@@ -36,7 +36,7 @@ const App = () => {
 
     axios.get('https://swapi.co/api/people/')
     .then(res => {
-      // console.log(res.data.next);
+      console.log(res.data);
       setPeople(res.data.results);
       setNext(res.data.next)
     }).catch(err => {
@@ -79,7 +79,7 @@ const App = () => {
     <div className="App">
       <h1 className="Header">React Wars</h1>
       <Button href="#" onClick={previousClick}>Previous</Button>
-      <Button href="# " onClick={nextClick}>Next</Button>
+      <Button href="#" onClick={nextClick}>Next</Button>
       
       {people.map(el => {
       return(<StarWars name={el.name} 
@@ -94,8 +94,8 @@ const App = () => {
             )
       })}
 
-      <Button onClick={previousClick}>Previous</Button>
-      <Button onClick={nextClick}>Next</Button>
+      <Button href="#" onClick={previousClick}>Previous</Button>
+      <Button href="#" onClick={nextClick}>Next</Button>
     </div>
   );
 }
